@@ -1,0 +1,34 @@
+
+
+http://wise2.ipac.caltech.edu/docs/release/allwise/expsup/sec2_1.html
+
+Total number of entries in the AllWISE Source Catalog:	 747,634,026
+Total number of entries in the AllWISE Reject Table: 	 428,787,253
+
+
+
+Table 1 - Number of AllWISE and All-Sky Release Catalog Entries With >2σ Detections in Each Band
+
+	       AllWISE	      	  AllSky  
+W4	40,939,966	5.5	61,049,159	10.8
+
+
+Band-Combination	det_bit	Number		Percentage of Total
+W1-W2-W3-W4		15	25,882,083	3.5
+W2-W3-W4		14	35,528		<0.1
+W1-W3-W4		13	859,426		0.1
+W3-W4			12	454,160		0.1
+W1-W2-W4		11	11,309,923	1.5
+W2-W4			10	15,556		<0.1
+W1-W4			9	2,347,472	0.3
+W4			8	35,818		<0.1
+W1-W2-W3		7	99,118,890	13.3
+W2-W3			6	71,392		<0.1
+W1-W3			5	5,808,864	0.8
+W3			4	245,990		<0.1
+W1-W2			3	481,471,559	64.4
+W2			2	428,965		0.1
+W1			1	119,544,951	16.0
+W1 (a)			0	3,449		<0.1
+(a) - Sources with missing W1 profile-fit flux uncertainties because of saturated 
+3-Band Cryo data that were "recovered" in the Catalog selection process.
