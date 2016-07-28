@@ -1,0 +1,24 @@
+Hi there GitHub!!
+
+      Username: d80b2t
+
+So, hopefully a fairly basic question/issue, but one I don't know the 'best' solution to. 
+I have a new repository called WW4C. 
+
+I'm developing code on my local machine in the directory: 
+ ~/programs/WW4C 
+and have done my git init etc. to make get things going here: 
+~/programs/WW4C/.git 
+
+However, I'm writing up my LaTeX notes for the WW4C in this other local directory:
+~/LaTeX/WW4C
+and *really* want to keep the two local directories on my machine separate (for e.g. version control and back-up purposes). 
+
+Thus, how do I initialize a 
+github.com/d80b2t/WW4C/LaTeX 
+directory and push/pull commits there??
+
+Thanks!
+Nic
+
+
