@@ -8,8 +8,8 @@
 /cos_pc19a_npr/programs/WW4C/plots/color_color/
 
 
-Purpose
-===============================================================
+ Purpose
+======================================================================
 This will be the directory where we'll make the ``Color-Color''
 plots for the WW4C.
 
@@ -17,6 +17,8 @@ plots for the WW4C.
 
 
 
-
+ Plotly
+======================================================================
+https://plot.ly/python/heatmaps/
 
 
