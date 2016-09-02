@@ -50,16 +50,16 @@ goes on from there.
 \DATABASE= 'AllWISE Source Catalog (wise_allwise_p3as_psd)'
 
 
-FILENAME      	     	 	    WHERE					RowsRetrieved
--------------------------------	    -------------------------------		-------------------------------
-WISE_W4_W4SNRge3_W4MPROlt8.0*       (w4snr>=3 and w4mpro < 8.0)    		8246503
-WISE_W4_W4SNRge3_W4MPROlt7.0 	    (w4snr>=3 and w4mpro < 7.0)			3760807
+FILENAME      	     	 	    WHERE						RowsRetrieved				Size
+-------------------------------	    -------------------------------			-------------------------------		------------
+WISE_W4_W4SNRge3_W4MPROlt8.0*       (w4snr>=3 and w4mpro < 8.0)    			8246503					 1.4G
+WISE_W4_W4SNRge3_W4MPROlt7.0 	    (w4snr>=3 and w4mpro < 7.0)				3760807					 190M
 
-WISE_W4_W4SNRge3_W4MPROge7.0lt8.0   (w4snr>=3 and w4mpro>=7.0 and w4mpro < 8.0)	   
-WISE_W4_W4SNRge3_W4MPROge6.0lt7.0   (w4snr>=3 and w4mpro>=6.0 and w4mpro < 7.0)	   
-WISE_W4_W4SNRge3_W4MPROge5.0lt6.0   (w4snr>=3 and w4mpro>=5.0 and w4mpro < 6.0)	   
-WISE_W4_W4SNRge3_W4MPROge4.0lt5.0   (w4snr>=3 and w4mpro>=4.0 and w4mpro < 5.0)	   
-WISE_W4_W4SNRge3_W4MPROlt4.0        (w4snr>=3 and w4mpro < 4.0)    	 	
+WISE_W4_W4SNRge3_W4MPROge7.0lt8.0   (w4snr>=3 and w4mpro>=7.0 and w4mpro < 8.0)	   	4485696
+WISE_W4_W4SNRge3_W4MPROge6.0lt7.0   (w4snr>=3 and w4mpro>=6.0 and w4mpro < 7.0)		2008678
+WISE_W4_W4SNRge3_W4MPROge5.0lt6.0   (w4snr>=3 and w4mpro>=5.0 and w4mpro < 6.0)		 950398
+WISE_W4_W4SNRge3_W4MPROge4.0lt5.0   (w4snr>=3 and w4mpro>=4.0 and w4mpro < 5.0)		 424874
+WISE_W4_W4SNRge3_W4MPROlt4.0        (w4snr>=3 and w4mpro < 4.0)				 376857					 66M
 
 
 
