@@ -30,12 +30,17 @@ data = pd.read_table(path, delimiter='\s+')
 """
 Hi Nic,
 
-Pandas is awesome and I'd recommend it to anyone. In this specific case I'm not exactly sure how you'd read in but looking up on the read_table docs it looks alright, but once you have the dataframe you access the columns by data[column_name] which are (if it has been read in correctly) the headers. 
+Pandas is awesome and I'd recommend it to anyone. In this specific
+case I'm not exactly sure how you'd read in but looking up on the
+read_table docs it looks alright, but once you have the dataframe you
+access the columns by data[column_name] which are (if it has been read
+in correctly) the headers.
 
 The way to find out what columns it has read in is just
 print data.columns
 
-If it doesn't show up the headers you expect then it probably hasn't been read in properly and I'd recommend looking at the read_table docs
+If it doesn't show up the headers you expect then it probably hasn't
+been read in properly and I'd recommend looking at the read_table docs
 
 Hope this helps!
 
