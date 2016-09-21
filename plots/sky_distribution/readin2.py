@@ -1,4 +1,5 @@
 #!/usr/bin/env
+
 """
 
 """
@@ -26,18 +27,29 @@ cols = ['designation', 'ra', 'dec', 'sigra', 'sigdec', 'w1mpro', 'w1sigmpro', 'w
 ## "Trick" is to use the  delimiter='\s+'  option
 data = pd.read_table(path, delimiter='\s+')
 
+"""
+Hi Nic,
+
+Pandas is awesome and I'd recommend it to anyone. In this specific
+case I'm not exactly sure how you'd read in but looking up on the
+read_table docs it looks alright, but once you have the dataframe you
+access the columns by data[column_name] which are (if it has been read
+in correctly) the headers.
+
+The way to find out what columns it has read in is just
+print data.columns
+
+If it doesn't show up the headers you expect then it probably hasn't
+been read in properly and I'd recommend looking at the read_table docs
+
+Hope this helps!
+
+Joey
+"""
+
 ## Could do just this...
 ra = data['ra']
 dec = data['dec']
-
-w1mpro = data['w1mpro']
-w2mpro = data['w2mpro']
-w3mpro = data['w3mpro']
-w4mpro = data['w4mpro']
-
-w1snr = data['w1snr']
-w2snr = data['w2snr']
-w3snr = data['w3snr']
 w4snr = data['w4snr']
 ## ... and then plot from there, or,
 
@@ -49,11 +61,8 @@ xlabel('Right Ascension (J2000)')
 ylabel('Declination (J2000)')
 
 
-## Will do this...
-# df = pd.DataFrame(data, columns=['ra', 'dec'])
-## or better yer..
-df = pd.DataFrame(data, columns=cols)
-
+# Will do this...
+df = pd.DataFrame(data, columns=['ra', 'dec'])
 
 
 ## Now we're getting into it... ;-)
