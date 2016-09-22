@@ -45,8 +45,8 @@ w4snr = data['w4snr']
 #ax.scatter(ra, dec, edgecolor='')
 plt.scatter(ra, dec, edgecolor='', label='WISE w4')
 plt.show()
-xlabel('Right Ascension (J2000)')
-ylabel('Declination (J2000)')
+plt.xlabel('Right Ascension (J2000)')
+plt.ylabel('Declination (J2000)')
 
 
 ## Will do this...
@@ -62,31 +62,17 @@ df = pd.DataFrame(data, columns=cols)
 ##  gridsize  controls the number of hexagons in the x-direction
 ##
 df.plot.hexbin(x='ra', y='dec', gridsize=25)
-df.plot.hexbin(x='ra', y='dec', C='z', reduce_C_function=np.maxgridsize=25)
-##
-df.plot.hexbin(x='a', y='b', C='z', reduce_C_function=np.max, gridsize=25)
+#df.plot.hexbin(x='ra', y='dec', C='z', reduce_C_function=np.max, gridsize=25)
+##df.plot.hexbin(x='a', y='b', C='z', reduce_C_function=np.max, gridsize=25)
+
+
+# fig, ax = plt.subplots()
+# ax.scatter(x, y, c=z, s=50, edgecolor='')
+# plt.show()
 
 
 ##
-## http://stackoverflow.com/questions/20105364/how-can-i-make-a-scatter-plot-colored-by-density-in-matplotlib
-##
-# Calculate the point density
-xy = np.vstack([ra,dec])
-
-## This next line just kills everything... :-/
-z = gaussian_kde(xy)(xy)
-
-# Sort the points by density, so that the densest points are plotted last
-#idx = z.argsort()
-#x, y, z = x[idx], y[idx], z[idx]
-
-#fig, ax = plt.subplots()
-#ax.scatter(x, y, c=z, s=50, edgecolor='')
-#plt.show()
-
-
-##
-## This is cool.. ;-)
+## This is pretty cool.. ;-)
 ##
 ## http://matplotlib.org/examples/shapes_and_collections/scatter_demo.html
 ##
