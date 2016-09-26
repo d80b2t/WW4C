@@ -44,6 +44,7 @@ w4snr = data['w4snr']
 #fig, ax = plt.subplots()
 #ax.scatter(ra, dec, edgecolor='')
 plt.scatter(ra, dec, edgecolor='', label='WISE w4')
+plt.scatter(w1mpro, w2mpro, edgecolor='', label='WISE w4')
 plt.show()
 plt.xlabel('Right Ascension (J2000)')
 plt.ylabel('Declination (J2000)')
