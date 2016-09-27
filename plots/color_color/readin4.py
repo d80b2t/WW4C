@@ -33,3 +33,10 @@ w1 = tbl['w1mpro']
 w2 = tbl['w2mpro']
 w3 = tbl['w3mpro']
 w4 = tbl['w4mpro']
+
+
+plt.scatter(tbl["w1mpro"] - tbl["w2mpro"], tbl["w1mpro"]) # plot W1-W2 vs. W1
+
+plt.ylim(reversed(plt.ylim())) # flip the y-axis
+plt.xlabel("$W1-W2$", fontsize=20)
+plt.ylabel("$W1$", fontsize=20)
