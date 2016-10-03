@@ -13,7 +13,7 @@ import numpy as np
 #%config InlineBackend.rc = {}
 import matplotlib
 #matplotlib.rc_file("../../templates/matplotlibrc")
-import matplotlib.mlab as mlab
+import matplotlib.mlab   as mlab
 import matplotlib.pyplot as plt
 #%matplotlib inline
 
@@ -25,7 +25,6 @@ path = '/cos_pc19a_npr/data/WISE/W4/WISE_W4_W4SNRge3_W4MPROlt4.0_nohdr.tbl'
 cols = ['designation', 'ra', 'dec', 'sigra', 'sigdec', 'w1mpro', 'w1sigmpro', 'w1snr', 'w2mpro', 'w2sigmpro', 'w2snr', 'w3mpro', 'w3sigmpro', 'w3snr', 'w4mpro', 'w4sigmpro', 'w4snr', 'w4rchi2']
 
 tbl = ascii.read(path)
-
 ## In [14]: type(tbl)
 ## Out[14]: astropy.table.table.Table
 
@@ -34,9 +33,14 @@ w2 = tbl['w2mpro']
 w3 = tbl['w3mpro']
 w4 = tbl['w4mpro']
 
+# In [18]: type(w1)
+# Out[18]: astropy.table.column.Column
+
 
 plt.scatter(tbl["w1mpro"] - tbl["w2mpro"], tbl["w1mpro"]) # plot W1-W2 vs. W1
 
 plt.ylim(reversed(plt.ylim())) # flip the y-axis
 plt.xlabel("$W1-W2$", fontsize=20)
 plt.ylabel("$W1$", fontsize=20)
+
+
