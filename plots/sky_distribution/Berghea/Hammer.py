@@ -161,15 +161,21 @@ def show_resid_Hammer(stars, plates, size, fov=1.26, ref=[], ref1=[], resid=None
         close()
    
     return None 
+
+
     
- 
-From: Nathan Secrest [mailto:nathansecrest@msn.com] 
+"""
+rom: Nathan Secrest [mailto:nathansecrest@msn.com] 
 Sent: Tuesday, August 09, 2016 3:49 PM
 To: Berghea, Ciprian
 Subject: [Non-DoD Source] code request
  
-Hey Ciprian, I've got a collaborator here at the Hidden Monsters conference who is looking for some Python-based code for making all-sky plots, like Aitoff/equal area plots.  I was wondering what code you use for the plots you make.  Could you send me a sample?
+Hey Ciprian, I've got a collaborator here at the Hidden Monsters
+conference who is looking for some Python-based code for making
+all-sky plots, like Aitoff/equal area plots.  I was wondering what
+code you use for the plots you make.  Could you send me a sample?
  
 Thanks!
  
 Nathan
+"""
