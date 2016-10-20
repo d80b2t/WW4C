@@ -1,0 +1,181 @@
+ 
+from mpl_toolkits.basemap import Basemap
+import matplotlib.pyplot as plt
+ 
+map = Basemap(projection='ortho',lat_0=0t,lon_0=0,resolution='l')
+map.drawmeridians(np.arange(0,360,30))
+map.drawparallels(np.arange(-90,90,10))
+x, y = map(wiseagn.ra, wiseagn.dec)
+crap = map.scatter(x,y,10,marker='o',color=’k’)
+plt.show()
+ 
+ 
+ 
+ 
+def show_resid_Hammer(stars, plates, size, fov=1.26, ref=[], ref1=[], resid=None,          \
+                          alpha=0.4, title='Plot', ecliptical=False, barLabel='mas', outfile=None, dpi=None):
+ 
+   
+    '''
+    Description
+    -----------
+    Plot residuals for star parameters from block adjustment
+    using the Hammer projection. The residuals are ploted as small circles
+    and the plates as squares. The residuals are color-coded
+    with in the matplotlib "jet" mode.
+   
+    Parameters:
+    -----------
+    stars: ndarray or recarray
+           The array that contains the stars positions (grid stars).
+                   If recarray, must contain the keywords "ra" and "dec".
+                   If regular ndarray, the ra and dec must be the first 2 columns.
+    plates: recarray
+            The pointings for plates, must contain the keywords "ra" and "dec".
+    size: float
+          Size for the small discs that represent the stars.
+    fov: float, optional
+         Field of view for the plates, or the size of the squares
+                 that represent the plates.
+    ref: ndarray or recarray, optional
+         Optionally, ICRF or zero-parallax stars can aslo be plotted.
+    resid: array of floats
+           The residuals to be plotted, must be equal in size to the stars array.
+    alpha: float, optional
+           Transparency factor for the star discs.
+    title: string, optional
+           Plot title
+   
+    '''
+ 
+    patches1 = []
+    patches2 = []
+    black = (0,0,0,1)
+    none = (0,0,0,0)
+ 
+ 
+    if type(stars) is N.recarray:
+                stars.ra[N.where(stars.ra >= 180)] -= 360
+    elif type(stars) is N.ndarray:
+        stars[N.where(stars[:,0] >= 180),0] -= 360
+ 
+    if type(ref) is N.recarray:
+                ref.ra[N.where(ref.ra >= 180)] -= 360
+    elif type(ref) is N.ndarray:
+        ref[N.where(ref[:,0] >= 180),0] -= 360
+ 
+ 
+    if type(stars) is N.recarray:
+            ra, dec = (stars.ra)*deg2rad, stars.dec*deg2rad
+    elif type(stars) is N.ndarray:
+            ra, dec = (stars[:,0])*deg2rad, stars[:,1]*deg2rad
+    else:
+            raise TypeError, 'Stars should be 2d array or recarray'
+ 
+ 
+ 
+ 
+    if ecliptical:
+        if type(stars) is N.recarray:
+            spherical = U.sky_to_spherical_array(stars.ra, stars.dec)
+        elif type(stars) is N.ndarray:
+            spherical = U.sky_to_spherical_array(stars[:,0], stars[:,1])
+        else:
+             raise TypeError, 'Stars should be 2d array or recarray'
+        ecliptic = N.dot(U.equatorial_to_ecliptical.T, spherical.T).T
+        ra, dec = U.spherical_to_sky(ecliptic[:,0], ecliptic[:,1], ecliptic[:,2])
+        ra, dec = (ra)*deg2rad, dec*deg2rad
+   
+    fig = figure(figsize=(16, 10))
+    fig1 = fig.add_subplot(111, aspect='equal', projection="hammer", title=title)
+    fig1.grid(True)
+   
+    for i in range(len(stars)):
+        patches1 += [ matplotlib.patches.Ellipse((ra[i], dec[i]), size/cos(dec[i]),     \
+                                        size, edgecolor='none')]
+    p1 = PatchCollection(patches1, cmap=cm.jet, alpha=alpha, edgecolors=('None',))
+    p1 = PatchCollection(patches1, cmap=cm.jet, alpha=alpha, edgecolors=('None',))
+    p1.set_array(pylab.array(resid))
+   
+    for i in range(len(plates)):
+        ra, dec = plates.ra[i] -180 - fov/2.0/cos(radians(plates.dec[i])),          \
+                        plates.dec[i] - fov/2.0
+                ra, dec = (ra)*deg2rad, dec*deg2rad
+                patches2 += [Rectangle((ra, dec),                                      \
+                fov*deg2rad/cos(dec), fov*deg2rad, edgecolor='black')]
+   
+    p2 = PatchCollection(patches2, facecolors=('None',), edgecolors = (black,))
+    fig1.add_collection(p1) 
+    fig1.add_collection(p2)
+   cb = colorbar(p1, shrink=0.8, format='%.3f', orientation='horizontal',     \
+                                        aspect=50)
+    cb.set_label(barLabel)
+ 
+   
+    
+    if type(ref) is N.recarray:
+            ra, dec = (ref.ra)*deg2rad, ref.dec*deg2rad
+    elif type(ref) is N.ndarray:
+            ra, dec = (ref[:,0])*deg2rad, ref[:,1]*deg2rad
+    else:
+             raise TypeError, 'Ref. stars should be 2d array or recarray'
+   
+    if ecliptical:
+        if type(ref) is N.recarray:
+            spherical = U.sky_to_spherical_array(ref.ra, ref.dec)
+        elif type(ref) is N.ndarray:
+            spherical = U.sky_to_spherical_array(ref[:,0], ref[:,1])
+        else:
+             raise TypeError, 'Stars should be 2d array or recarray'
+        ecliptic = N.dot(U.equatorial_to_ecliptical.T, spherical.T).T
+        ra, dec = U.spherical_to_sky(ecliptic[:,0], ecliptic[:,1], ecliptic[:,2])
+        ra, dec = (ra-180)*deg2rad, dec*deg2rad
+ 
+ 
+    if (len(ra) > 0):
+    # for i in range(len(ref)):
+        fig1.plot(ra, dec, c='black', marker='x', scalex=False,   \
+                                          scaley=False, ls='', ms=4)
+    '''
+    ref1.ra[N.where(ref1.ra >= 180)] -= 360
+    ra1, dec1 = (ref1.ra)*deg2rad, ref1.dec*deg2rad
+    fig1.plot(ra1, dec1, c='black', marker='+', scalex=False,   \
+                                          scaley=False, ls='', ms=3)
+    '''
+   
+    pos = N.zeros((366,3))
+    for i in N.arange(366):
+        pos[i,:], vel = N.array(novas.compat.solsys.solarsystem(U.J2000 + i, 3, 0))
+    sun_vector = -pos
+    sunRa, sunDec = U.spherical_to_sky(sun_vector[:,0], sun_vector[:,1], sun_vector[:,2])
+   
+    sunRa[N.where(sunRa >= 180)] -= 360
+    if not ecliptical:
+        fig1.plot((sunRa)*deg2rad, sunDec*deg2rad, color='black', marker='.', linestyle='', ms=1.0)
+ 
+    if outfile is None:
+        plt.show()
+    else:
+        print "Saving figure", outfile, dpi
+        plt.savefig(outfile, dpi=dpi)
+        close()
+   
+    return None 
+
+
+    
+"""
+rom: Nathan Secrest [mailto:nathansecrest@msn.com] 
+Sent: Tuesday, August 09, 2016 3:49 PM
+To: Berghea, Ciprian
+Subject: [Non-DoD Source] code request
+ 
+Hey Ciprian, I've got a collaborator here at the Hidden Monsters
+conference who is looking for some Python-based code for making
+all-sky plots, like Aitoff/equal area plots.  I was wondering what
+code you use for the plots you make.  Could you send me a sample?
+ 
+Thanks!
+ 
+Nathan
+"""
