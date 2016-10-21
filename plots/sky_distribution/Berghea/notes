@@ -1,3 +1,30 @@
+
+
+  Useful Links
+==========================================================================
+
+http://www.uvm.edu/~jbagrow/dsv/heatmap_basemap.html
+http://basemaptutorial.readthedocs.io/en/latest/plotting_data.html
+https://github.com/matplotlib/basemap/blob/master/examples/hexbin_demo.py
+
+http://matplotlib.org/basemap/api/basemap_api.html
+http://matplotlib.org/basemap/api/basemap_api.html#mpl_toolkits.basemap.Basemap.hexbin
+
+
+
+
+
+
+
+
+
+
+
+
+  Notes from Nathan S. and Ciprian
+==========================================================================
+
+
 Hi Nic, here's what my colleague does.  It seems to produce quite nice plots.
 
 Nathan
