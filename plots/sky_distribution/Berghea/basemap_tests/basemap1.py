@@ -6,4 +6,4 @@ map = Basemap()
 map.drawcoastlines()
 
 #plt.show()
-plt.savefig('test.png')
+plt.savefig('test1.png')
