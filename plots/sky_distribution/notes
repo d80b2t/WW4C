@@ -1,0 +1,41 @@
+
+
+   
+Commonly, a map projection is a systematic transformation of the latitudes and longitudes of locations on the surface of a sphere or an ellipsoid into locations on a plane.[1] Map projections are necessary for creating maps. All map projections distort the surface in some fashion. Depending on the purpose of the map, some distortions are acceptable and others are not; therefore, different map projections exist in order to preserve some properties of the sphere-like body at the expense of other properties. There is no limit to the number of possible map projections.[2]:1
+
+More generally, the surfaces of planetary bodies can be mapped even if they are too irregular to be modeled well with a sphere or ellipsoid; see below. Even more generally, projections are the subject of several pure mathematical fields, including differential geometry and projective geometry. However, "map projection" refers specifically to a cartographic projection.
+
+Retreived: Fri Oct 21 16:58:33 BST 2016
+https://en.wikipedia.org/wiki/Map_projection
+https://en.wikipedia.org/w/index.php?title=Map_projection&oldid=745105538
+
+
+	Mollweide
+==================================================
+
+
+
+	Hammer
+================================================== 
+The Hammer projection is an equal-area map projection described by
+Ernst Hammer in 1892. Using the same 2:1 elliptical outer shape as the
+Mollweide projection, Hammer intended to reduce distortion toward the
+outer meridians, where it is extreme in the Mollweide.
+
+Directly inspired by the Aitoff projection, Hammer suggested the use
+of the equatorial form of the Lambert azimuthal equal-area projection
+instead of Aitoff's use of the azimuthal equidistant projection:
+
+
+Retreived: Fri Oct 21 16:59:07 BST 2016
+https://en.wikipedia.org/wiki/Hammer_projection
+
+
+
+
+
+
+
+map projections mollweide vs hammer
+
+http://forums.xkcd.com/viewtopic.php?t=109793
