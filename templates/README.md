@@ -1,12 +1,12 @@
 # SED Templates
 
-# Purpose.
+## Purpose
 I want this to be a repo dir where I/anothers build up a list and series of SED templates.
 
 
 ## Bibliography
-Polletta et al., 2007ApJ...663...81P,  http://adsabs.harvard.edu/abs/2007ApJ...663...81P
-Polletta et al., 2008ApJ...675..960P, http://adsabs.harvard.edu/abs/2008ApJ...675..960P	
+Polletta et al., 2007ApJ...663...81P,  http://adsabs.harvard.edu/abs/2007ApJ...663...81P  
+Polletta et al., 2008ApJ...675..960P, http://adsabs.harvard.edu/abs/2008ApJ...675..960P	 
 
 The local AGN Spitzer survey
 
