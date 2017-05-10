@@ -1,0 +1,96 @@
+
+
+
+ Overview
+==========================================================================================================================
+These are the notes that will describe how to get the data files for the WW4C.
+Since e.g. github is not a *data* repo, and I use "big data" files, it is entirely
+appropriate to give these instructions. 
+
+
+
+
+
+ Recipe
+==========================================================================================================================
+
+1) Go to:	http://irsa.ipac.caltech.edu/frontpage/
+
+2) Select:	Catalogs
+
+3) Select:	WISE/NEOWISE (Wide-Field Infrared Survey Explorer)
+
+4) Select:	AllWISE Source Catalog
+
+5) Select: 	All Sky Search
+		ADDITIONAL CONSTRAINTS (SQL) that are needed. A lot of these are given below. 
+
+6) Click:	Run Query
+
+
+
+
+
+(w4snr>=3))
+
+
+
+
+
+ File names (and what's in them...) 
+==========================================================================================================================
+Okay, as always, there a a lot of ways one can name files.
+Although the directory I'm working in
+	 /cos_pc19a_npr/data/WISE/W4
+already has WISE and W4 in the path, I'm actually going to keep
+these designators in the filename too. Thus, every file starts with ``WISE_W4_" and 
+goes on from there. 
+
+
+
+\DATABASE= 'AllWISE Source Catalog (wise_allwise_p3as_psd)'
+
+
+FILENAME      	     	 	    WHERE						RowsRetrieved				Size
+-------------------------------	    -------------------------------			-------------------------------		------------
+
+
+WISE_W4_W4SNRge3_W4MPROlt8.0*       (w4snr>=3 and w4mpro < 8.0)    			8246503					 1.4G
+WISE_W4_W4SNRge3_W4MPROlt7.0 	    (w4snr>=3 and w4mpro < 7.0)				3760807					 190M
+
+WISE_W4_W4SNRge3_W4MPROge7.0lt8.0   (w4snr>=3 and w4mpro>=7.0 and w4mpro < 8.0)	   	4485696
+WISE_W4_W4SNRge3_W4MPROge6.0lt7.0   (w4snr>=3 and w4mpro>=6.0 and w4mpro < 7.0)		2008678
+WISE_W4_W4SNRge3_W4MPROge5.0lt6.0   (w4snr>=3 and w4mpro>=5.0 and w4mpro < 6.0)		 950398
+WISE_W4_W4SNRge3_W4MPROge4.0lt5.0   (w4snr>=3 and w4mpro>=4.0 and w4mpro < 5.0)		 424874
+WISE_W4_W4SNRge3_W4MPROlt4.0        (w4snr>=3 and w4mpro < 4.0)				 376857					 66M
+
+
+
+
+
+
+
+*5cols*   = |         ra|        dec| w4mpro|w4sigmpro|   w4snr|
+
+*18cols*  = |         designation|         ra|        dec|   sigra|  sigdec| w1mpro|w1sigmpro|   w1snr| w2mpro|w2sigmpro|   w2snr| w3mpro|w3sigmpro|   w3snr| w4mpro|w4sigmpro|   w4snr|  w4rchi2|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Mini-revision history 
+==========================================================================================================================
+Tue Aug 30 12:38:18 BST 2016		NPR
+Fri Aug 26 19:34:10 BST 2016		NPR
