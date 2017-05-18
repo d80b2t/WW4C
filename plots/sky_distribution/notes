@@ -33,6 +33,42 @@ https://en.wikipedia.org/wiki/Hammer_projection
 
 
 
+http://docs.astropy.org/en/stable/coordinates/skycoord.html
+================================================== 
+Suggestion from Meredith Rawls (Many thanks!!! ;-)
+https://twitter.com/merrdiff/status/862704926518124544
+And of course Jim Geach::
+https://twitter.com/jgeach/status/862714130452578305
+
+
+
+Notes from Maciej
+==================================================
+For the maps - as I'm a Topcat/Stilts fan and a Healpix user, what I
+do is to first export the catalogue (with Topcat or Stilts) into a
+simple two-column ascii list of coordinates for all the sources. Then
+I pixelise the ascii catalogue using Healpy with some reasonable NSide
+(for maps I think 512 or even less was enough) and save the result not
+only as a fits map but also as a text file. This text file, which by
+then is megabytes rather than gigabytes as the input catalogue was, I
+then import into Topcat and plot a sky map from there using pixel
+counts as map values (rescaled by pixel area if I want to have
+counts/deg2). The map needs some tweaking in Topcat to look nice
+(colour scale, dot sizes and shapes etc.) but Topcat is flexible
+enough to usually provide the desired output. Then it's enough to
+export to pdf, which is of publishable quality in the latest Topcat
+versions (pngs are also good; but eps are usually very large).
+
+In the meantime however Topcat's Mark Taylor added a functionality to
+directly deal with Healpix maps (in fits I believe), but I haven't
+explored that so far.
+
+So, the code itself is only for the pixelisation; the rest is done
+pretty much manually (but could be automatised in Stilts, and all
+could be joined into some bash script). If you're interested in the
+pixelisation code (python), which is efficient enough that it should
+work even on (modern) laptops, then I can pass it to you. But it's
+nothing sophisticated really :)
 
 
 
