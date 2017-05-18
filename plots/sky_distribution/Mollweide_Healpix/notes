@@ -1,0 +1,13 @@
+
+I really like the ``Density of processed 3.88 × 108 PS1 3Pi sources as Mollweide projection'' plot from Hernitschek et al. (2016, ApJ, 817, 73; 
+
+This was made using the healpy (https://healpy.readthedocs.org) pixelation method. 
+So I'm going to dig on that.
+
+
+
+http://balbuceosastropy.blogspot.co.uk/2013/09/representations-of-sphere-and-cosmic.html
+
+https://python4astronomers.github.io/astropy/wcs.html
+
+http://www.astroml.org/examples/datasets/plot_nasa_atlas.html
