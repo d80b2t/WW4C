@@ -5,9 +5,7 @@ I want this to be a repo dir where I/anothers build up a list and series of SED 
 
 
 ## Bibliography
-Polletta et al., 2007ApJ...663...81P,  http://adsabs.harvard.edu/abs/2007ApJ...663...81P  
-Polletta et al., 2008ApJ...675..960P, http://adsabs.harvard.edu/abs/2008ApJ...675..960P	 
-
+Lani, Netzer, Lutz, 2017arXiv1705.06747v1, https://arxiv.org/abs/1705.06747v1
 Lyu & Rieke, 2017arXiv170406987v1, https://arxiv.org/abs/1704.06987v1
 Lyu, Rieke, Shi, 2017ApJ...835..257L, http://adsabs.harvard.edu/abs/2017ApJ...835..257L
 Garcıa-González et al. 2016
@@ -20,6 +18,8 @@ Mor & Netzer 2012
 Mor & Trakhtenbrot 2011;
 Shang et al. 2011;
 Mullaney et al. 2011; 2011MNRAS.414.1082M	http://adsabs.harvard.edu/abs/2011MNRAS.414.1082M
+Polletta et al., 2008ApJ...675..960P, http://adsabs.harvard.edu/abs/2008ApJ...675..960P
+Polletta et al., 2007ApJ...663...81P,  http://adsabs.harvard.edu/abs/2007ApJ...663...81P  
 Netzer et al. 2007;
 Richards et al. 2006; 
 Alonso-Herrero et al. 2003 
