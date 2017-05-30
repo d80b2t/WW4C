@@ -1,0 +1,460 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                           
+% Needs:  mn2e.cls, mn2e.bst, mn.sty, format.tex, psfig.sty
+%									    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[usenatbib]{mn2e}
+
+\input {format}
+
+\begin{document}
+
+\title[Odd page Title.]
+      {The WISE $W4$ Compendium}
+\author[N.P. Ross et al.]
+       {Nicholas P. Ross$^{1}$\thanks{email: npross@roe.ac.uk}\\ 
+$^1$Institute for Astronomy, University of Edinburgh, Royal Observatory, Edinburgh, EH9 3HJ, United Kingdom\\
+}
+
+\maketitle
+\begin{abstract}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta
+sodales est, vel cursus risus porta non. Vivamus vel pretium
+velit. Sed fringilla suscipit felis, nec iaculis lacus convallis
+ac. Fusce pellentesque condimentum dolor, quis vehicula tortor
+hendrerit sed. Class aptent taciti sociosqu ad litora torquent per
+conubia nostra, per inceptos himenaeos. Etiam interdum tristique diam
+eu blandit. Donec in lacinia libero.
+%%
+Sed elit massa, eleifend non sodales a, commodo ut felis. Sed id
+pretium felis. Vestibulum et turpis vitae quam aliquam convallis. Sed
+id ligula eu nulla ultrices tempus. Phasellus mattis erat quis metus
+dignissim malesuada. Nulla tincidunt quam volutpat nibh facilisis
+euismod. Cras vel auctor neque. Nam quis diam risus.
+\end{abstract}
+
+
+\begin{keywords}
+Astronomical data bases: surveys -- 
+Quasars: general -- 
+galaxies: evolution -- 
+galaxies: infrared.
+\end{keywords}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  S E C T I O  N   1         S E C T I O  N   1           S E C T I O  N   1       S E C T I O  N   1
+%%  S E C T I O  N   1         S E C T I O  N   1           S E C T I O  N   1       S E C T I O  N   1
+%%  S E C T I O  N   1         S E C T I O  N   1           S E C T I O  N   1       S E C T I O  N   1
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+Along with nuclear fusion, gravitational accretion onto a black hole is one of the two major energy sources available to a galaxy. 
+After dark matter, dust in galaxies is the most poorly understood constituent of galaxies. 
+Sky surveys, in new electromagnetic wavebands, have long provided key datasets and led to new insights into out Universe. 
+%%
+In this paper, we present the ``WISE W4 Compendium'' (WW4C); a detailed study into the objects that were detected in the
+longest waveband, 20-28$\mu$m observed, on the Wide-Field Infrared Survey Explorer \citep[WISE;][]{Wright10, Cutri13} mission. 
+%%
+This study will describe all 40 million objects that are detected in the WISE W4-band, but will concentrate on those objects most affected by radiating dust emission and well described by extragalactic, and AGN, spectral energy distributions (SEDs). 
+The motivations of the WW4C are numerous, but the primary science we will pursue is the identification of bolometric luminous AGN, especially those that might not be observered in X-ray/UV/optical surveys. 
+%%
+However, we will aim to remain as agnostic as possible to the origin of the objects that are emit in the mid-infrared. 
+
+
+WISE mapped the sky in 4 passbands, in bands centered at wavelengths of 3.4, 4.6, 12, and 23$\mu$m. 
+In total the release all sky ``ALLWISE'' catalog, contains nearly 750 million detections at high-significance\footnote{
+\href{http://wise2.ipac.caltech.edu/docs/release/allwise/expsup/sec2\_1.html}{http://wise2.ipac.caltech.edu/docs/release/allwise/expsup/sec2\_1.html}}. 
+%%
+This dataset is a significant advance in quality and depth than prior missions, and will remain the all-sky state-of-the-art for the foreseable future. 
+%%
+
+Numerous studies have investigated the WISE MIR AllWISE data release for various scientific reasons. 
+%%
+Indeed there are too many studies to mention here and do all justice to their findings. 
+As such, we concentrate with those with a AGN flavour. 
+%%
+
+\citet{Assef13}, 
+\citet{Stern12}
+
+
+
+\subsection{A Few Preparatory Notes}
+\citet{Brown14b}, in PASA, is the paper about Recalibrating the Wide-field Infrared Survey Explorer (WISE) W4 Filter,
+
+\citet{Brown14a}, in ApJS, is the paper about An Atlas of Galaxy Spectral Energy Distributions from the Ultraviolet to the Mid-infrared.\\
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  S E C T I O  N   2         S E C T I O  N   2           S E C T I O  N   2       S E C T I O  N   2
+%%  S E C T I O  N   2         S E C T I O  N   2           S E C T I O  N   2       S E C T I O  N   2
+%%  S E C T I O  N   2         S E C T I O  N   2           S E C T I O  N   2       S E C T I O  N   2
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Data}
+There are 747,634,026 total entries in the AllWISE Source Catalog. 
+Of these, 40,939,966 (5.476\%) are W4-detected. 
+
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{l rr}
+      \hline
+      \hline
+      Description & \#  objects & \% of Total \\         
+      \hline  
+      AllWISE Source Catalog & 747,634,026  & 100.0000 \\
+      All W4 detections          &  40,939,966  &      5.4759 \\
+      W4 Only                        &         35,818  &      0.0048\\
+     \hline
+      \hline
+    \end{tabular}
+    \caption{}
+    \label{tab:ERQ_key_numbers}
+  \end{center}
+  \vspace{-8pt}
+\end{table}
+
+
+%    \begin{figure}
+%      \includegraphics[height=8.0cm,width=8.0cm]
+%      {pdf/SDSS_Quasar_Nofz.pdf}
+%      \centering
+%      \caption[he selection of $z \sim 0.7$ LRGs using the SDSS $riz$-bands]
+%              {The selection of $z \sim 0.7$ LRGs using the SDSS $riz$-bands.}
+%      \label{fig:fig1}
+%    \end{figure}
+
+
+%    \begin{table}
+%    \begin{center}
+%    \setlength{\tabcolsep}{4pt}
+%    \begin{tabular}{lrrr}
+%    Sample Description  & Number in sample & North & South   \\
+%    \hline
+%    \label{tab:The_LRG_numbers}
+%    \end{tabular}
+%    \caption{}
+%    \end{center}
+%    \end{table}
+
+%    \begin{equation}
+%      \label{equ:simple_prob}
+%      dP = n \, dV.
+%    \end{equation}
+    
+%    \begin{eqnarray}
+%      \xi_{LS}(s) &=& 1 + \left(\frac{N_{rd}}{N} \right)^{2} \frac{DD(s)}{RR(s)} -
+%      2   \left( \frac{N_{rd}}{N} \right) \frac{DR(s)}{RR(s)} \\
+%      &\equiv&  \frac{DD(s)-2DR(s)+RR(s)}{RR(s)},
+%      \label{lseq}
+%    \end{eqnarray}
+
+%% http://www-astro.physics.ox.ac.uk/~kmb/latex_colour.html
+%{\color{red} ...bit of LaTeX text...}
+%an example of making an equation the colour DarkSeaGreen (rather a sophisticated shade, I think) one types the following:
+%\begin{equation}
+%{\color{DarkSeaGreen} x = \log_{10} (\nu/\rm MHz) }
+%\end{equation}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  S E C T I O  N   3         S E C T I O  N   3           S E C T I O  N   3       S E C T I O  N   3
+%%  S E C T I O  N   3         S E C T I O  N   3           S E C T I O  N   3       S E C T I O  N   3
+%%  S E C T I O  N   3         S E C T I O  N   3           S E C T I O  N   3       S E C T I O  N   3
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The WW4C}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta sodales est, vel cursus risus porta non. Vivamus vel pretium velit. Sed fringilla suscipit felis, nec iaculis lacus convallis ac. Fusce pellentesque condimentum dolor, quis vehicula tortor hendrerit sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam interdum tristique diam eu blandit. Donec in lacinia libero.
+
+Sed elit massa, eleifend non sodales a, commodo ut felis. Sed id pretium felis. Vestibulum et turpis vitae quam aliquam convallis. Sed id ligula eu nulla ultrices tempus. Phasellus mattis erat quis metus dignissim malesuada. Nulla tincidunt quam volutpat nibh facilisis euismod. Cras vel auctor neque. Nam quis diam risus.
+
+Nunc semper quam et leo interdum vulputate eu quis magna. Sed nec arcu at orci egestas convallis. Aenean quam velit, aliquam vitae viverra in, elementum vel elit. Nunc suscipit aliquet sapien a suscipit. Cras nulla ipsum, posuere eu fringilla sit amet, dapibus ultricies nulla. Nullam eu augue id purus mollis dignissim sed et libero. Phasellus eget justo sed neque pellentesque egestas nec id arcu. Donec facilisis pulvinar sapien et fringilla. Suspendisse vestibulum rhoncus sapien id laoreet. Morbi et orci vitae tortor imperdiet imperdiet. In hac habitasse platea dictumst. Vivamus vel neque id mi ultrices tristique. Integer quam libero, ornare vel gravida in, feugiat a ante. Nam dapibus, tellus vitae pellentesque cursus, dui nisl egestas augue, non fermentum nisl est nec nisi. Vestibulum nec mi justo, eget dapibus velit.
+
+Cras in laoreet mauris. Vivamus nec nulla a dui commodo adipiscing. Proin vulputate lectus nec arcu iaculis sit amet auctor ligula ultricies. Phasellus condimentum gravida tincidunt. Phasellus et mauris ac nibh vestibulum vehicula. Morbi et augue id purus gravida sagittis quis in sem. Phasellus quis risus bibendum eros luctus auctor.
+
+Etiam mollis viverra nisi eget aliquet. Aliquam erat volutpat. Vivamus tristique, nisl eu malesuada semper, libero tortor convallis elit, a scelerisque orci nisi lacinia turpis. In lacinia ultrices volutpat. Proin ultrices luctus tellus, in placerat eros tincidunt id. Ut varius iaculis quam in consequat. Nulla nec orci est, sit amet pellentesque nisl. Mauris non cursus lectus. Praesent placerat leo vel erat gravida lacinia. Donec vehicula consectetur lectus vitae luctus. Praesent nisl justo, laoreet elementum facilisis vel, tristique ac enim. Etiam vel quam ut quam eleifend tincidunt. Suspendisse sit amet eros vel elit ullamcorper laoreet. Etiam venenatis sodales turpis, nec lacinia ligula hendrerit nec. Nam eu vulputate purus. Quisque facilisis congue metus, sed imperdiet lorem rhoncus sit amet.
+
+Proin non tempus velit. Etiam laoreet, enim nec scelerisque dictum, tortor massa tempor enim, id pretium justo quam ac lectus. Maecenas diam nibh, interdum at lobortis sit amet, dignissim et quam. Sed tincidunt faucibus risus, congue tempus nisl consectetur eget. Suspendisse venenatis turpis ut risus aliquam interdum. In at velit sed ligula dictum dignissim ut et dui. Curabitur ac scelerisque purus.
+
+\subsection{Dust Overview}
+http://arxiv.org/pdf/1605.06671.pdf
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  S E C T I O  N   3         S E C T I O  N   3           S E C T I O  N   3       S E C T I O  N   3
+%%  S E C T I O  N   3         S E C T I O  N   3           S E C T I O  N   3       S E C T I O  N   3
+%%  S E C T I O  N   3         S E C T I O  N   3           S E C T I O  N   3       S E C T I O  N   3
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Galactic Objects in the WW4C}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta sodales est, vel cursus risus porta non. Vivamus vel pretium velit. Sed fringilla suscipit felis, nec iaculis lacus convallis ac. Fusce pellentesque condimentum dolor, quis vehicula tortor hendrerit sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam interdum tristique diam eu blandit. Donec in lacinia libero.
+
+\subsection{Stars}
+Sed elit massa, eleifend non sodales a, commodo ut felis. Sed id pretium felis. Vestibulum et turpis vitae quam aliquam convallis. Sed id ligula eu nulla ultrices tempus. Phasellus mattis erat quis metus dignissim malesuada. Nulla tincidunt quam volutpat nibh facilisis euismod. Cras vel auctor neque. Nam quis diam risus.
+
+Etiam mollis viverra nisi eget aliquet. Aliquam erat volutpat. Vivamus tristique, nisl eu malesuada semper, libero tortor convallis elit, a scelerisque orci nisi lacinia turpis. In lacinia ultrices volutpat. Proin ultrices luctus tellus, in placerat eros tincidunt id. Ut varius iaculis quam in consequat. Nulla nec orci est, sit amet pellentesque nisl. Mauris non cursus lectus. Praesent placerat leo vel erat gravida lacinia. Donec vehicula consectetur lectus vitae luctus. Praesent nisl justo, laoreet elementum facilisis vel, tristique ac enim. Etiam vel quam ut quam eleifend tincidunt. Suspendisse sit amet eros vel elit ullamcorper laoreet. Etiam venenatis sodales turpis, nec lacinia ligula hendrerit nec. Nam eu vulputate purus. Quisque facilisis congue metus, sed imperdiet lorem rhoncus sit amet.
+
+
+\subsection{Brown Dwarfs}
+Nunc semper quam et leo interdum vulputate eu quis magna. Sed nec arcu at orci egestas convallis. Aenean quam velit, aliquam vitae viverra in, elementum vel elit. Nunc suscipit aliquet sapien a suscipit. Cras nulla ipsum, posuere eu fringilla sit amet, dapibus ultricies nulla. Nullam eu augue id purus mollis dignissim sed et libero. Phasellus eget justo sed neque pellentesque egestas nec id arcu. Donec facilisis pulvinar sapien et fringilla. Suspendisse vestibulum rhoncus sapien id laoreet. Morbi et orci vitae tortor imperdiet imperdiet. In hac habitasse platea dictumst. Vivamus vel neque id mi ultrices tristique. Integer quam libero, ornare vel gravida in, feugiat a ante. Nam dapibus, tellus vitae pellentesque cursus, dui nisl egestas augue, non fermentum nisl est nec nisi. Vestibulum nec mi justo, eget dapibus velit.
+
+\subsection{PNe}
+http://www.astroscu.unam.mx/apn6/PROCEEDINGS/Kronberger.pdf
+	
+Kronberger et al. 2014
+
+Cras in laoreet mauris. Vivamus nec nulla a dui commodo adipiscing. Proin vulputate lectus nec arcu iaculis sit amet auctor ligula ultricies. Phasellus condimentum gravida tincidunt. Phasellus et mauris ac nibh vestibulum vehicula. Morbi et augue id purus gravida sagittis quis in sem. Phasellus quis risus bibendum eros luctus auctor.
+
+Proin non tempus velit. Etiam laoreet, enim nec scelerisque dictum, tortor massa tempor enim, id pretium justo quam ac lectus. Maecenas diam nibh, interdum at lobortis sit amet, dignissim et quam. Sed tincidunt faucibus risus, congue tempus nisl consectetur eget. Suspendisse venenatis turpis ut risus aliquam interdum. In at velit sed ligula dictum dignissim ut et dui. Curabitur ac scelerisque purus.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  S E C T I O  N   4         S E C T I O  N   4           S E C T I O  N   4       S E C T I O  N   4
+%%  S E C T I O  N   4         S E C T I O  N   4           S E C T I O  N   4       S E C T I O  N   4
+%%  S E C T I O  N   4         S E C T I O  N   4           S E C T I O  N   4       S E C T I O  N   4
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Local Extragalactic Objects}
+Cras in laoreet mauris. Vivamus nec nulla a dui commodo adipiscing. Proin vulputate lectus nec arcu iaculis sit amet auctor ligula ultricies. Phasellus condimentum gravida tincidunt. Phasellus et mauris ac nibh vestibulum vehicula. Morbi et augue id purus gravida sagittis quis in sem. Phasellus quis risus bibendum eros luctus auctor.
+
+Etiam mollis viverra nisi eget aliquet. Aliquam erat volutpat. Vivamus tristique, nisl eu malesuada semper, libero tortor convallis elit, a scelerisque orci nisi lacinia turpis. In lacinia ultrices volutpat. Proin ultrices luctus tellus, in placerat eros tincidunt id. Ut varius iaculis quam in consequat. Nulla nec orci est, sit amet pellentesque nisl. Mauris non cursus lectus. Praesent placerat leo vel erat gravida lacinia. Donec vehicula consectetur lectus vitae luctus. Praesent nisl justo, laoreet elementum facilisis vel, tristique ac enim. Etiam vel quam ut quam eleifend tincidunt. Suspendisse sit amet eros vel elit ullamcorper laoreet. Etiam venenatis sodales turpis, nec lacinia ligula hendrerit nec. Nam eu vulputate purus. Quisque facilisis congue metus, sed imperdiet lorem rhoncus sit amet.
+
+\subsection{Spirals in the Beam}
+Proin non tempus velit. Etiam laoreet, enim nec scelerisque dictum, tortor massa tempor enim, id pretium justo quam ac lectus. Maecenas diam nibh, interdum at lobortis sit amet, dignissim et quam. Sed tincidunt faucibus risus, congue tempus nisl consectetur eget. Suspendisse venenatis turpis ut risus aliquam interdum. In at velit sed ligula dictum dignissim ut et dui. Curabitur ac scelerisque purus.
+
+\subsection{Mergering Systems}
+Pellentesque vel elit neque, in interdum lacus. Quisque sodales, nunc et luctus convallis, nisl dui luctus dui, at congue urna velit a nisl. Ut sit amet sapien a risus dapibus sagittis. Cras sed ultricies erat. Donec id metus sed urna lacinia convallis vel sed enim. Proin nisi libero, ornare vel bibendum eu, sollicitudin sed leo. Cras tincidunt aliquet ultricies. Cras pretium velit leo, in malesuada enim. Duis sagittis ultricies interdum. Proin sit amet sem nec metus feugiat pharetra.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  S E C T I O  N   5         S E C T I O  N   5           S E C T I O  N   5       S E C T I O  N   5
+%%  S E C T I O  N   5         S E C T I O  N   5           S E C T I O  N   5       S E C T I O  N   5
+%%  S E C T I O  N   5         S E C T I O  N   5           S E C T I O  N   5       S E C T I O  N   5
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Distant Extragalactic Objects}
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris at diam quis arcu pretium dictum. Quisque id risus odio. Pellentesque posuere semper tempor. Donec volutpat quam ut urna rutrum venenatis dapibus nunc interdum. Sed quis diam ac mauris cursus accumsan. Maecenas sit amet libero in elit mattis iaculis sed quis elit. Pellentesque vitae mauris nunc.
+
+\subsection{The so-called ``DOGs''}
+Cras scelerisque egestas ante vitae lacinia. Nunc velit nunc, tempus congue lobortis auctor, pellentesque ac ipsum. Donec erat urna, interdum eget blandit non, malesuada nec tellus. Aliquam erat volutpat. Maecenas ut eros id lorem suscipit vulputate pulvinar quis libero. Phasellus ipsum libero, sollicitudin vel luctus in, faucibus at mauris. Fusce ultrices egestas turpis, eget mattis tellus pellentesque vel. Donec ut ligula id nisi commodo tristique. Etiam semper turpis eget purus rhoncus a malesuada massa ultrices. Fusce luctus vehicula sem, eget scelerisque lacus fermentum sed. Nulla facilisi. Aenean ut turpis sed quam ullamcorper mattis sit amet ut justo. Morbi lorem dui, aliquam et pharetra non, luctus eu enim. Nulla molestie hendrerit mi tincidunt interdum. Nunc a augue nunc.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  S E C T I O  N   6         S E C T I O  N   6           S E C T I O  N   6       S E C T I O  N   6
+%%  S E C T I O  N   6         S E C T I O  N   6           S E C T I O  N   6       S E C T I O  N   6
+%%  S E C T I O  N   6         S E C T I O  N   6           S E C T I O  N   6       S E C T I O  N   6
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{AGN}
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis tempus, lectus nec ultricies mollis, mi orci feugiat nulla, a bibendum velit orci nec lacus. Duis a odio in nisi egestas dictum. Nullam vel quam mauris, eget consectetur orci. Morbi ac mi sit amet neque consectetur tempus ac eget est. Curabitur malesuada arcu sit amet metus dictum at dapibus arcu accumsan. Fusce sollicitudin luctus rutrum.
+
+Nunc lacus nibh, convallis ac lobortis ut, tempus ac lectus. Maecenas eu elit massa. Nulla vel lacus lorem. Proin et lobortis tortor. Phasellus ultrices nisl non enim porttitor dictum. Curabitur nec nunc ac nibh ornare elementum. Nunc ultrices hendrerit ultricies. Aliquam dapibus semper est et gravida. Etiam cursus, massa eget tempor elementum, lectus urna feugiat nisi, eget sagittis
+\subsection{Mullaney SEDs}
+
+\subsection{Number Density of High-$z$ Sources}
+Cras quis nisl eget orci ultricies tempor quis id mi. Nullam ut sollicitudin justo. Maecenas posuere fermentum nunc et faucibus. Integer consectetur nibh a dolor blandit ornare. In et dui id sapien suscipit commodo eget vitae dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ut elit sed urna semper imperdiet nec ac lorem. Integer varius nibh a mauris posuere non convallis nibh commodo. Cras posuere lorem sit amet orci elementum sit amet dapibus risus lacinia. Morbi vitae lobortis dui. Nulla ac lacus tellus, a volutpat tortor.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  S E C T I O  N   7         S E C T I O  N   7           S E C T I O  N   7       S E C T I O  N   7
+%%  S E C T I O  N   7         S E C T I O  N   7           S E C T I O  N   7       S E C T I O  N   7
+%%  S E C T I O  N   7         S E C T I O  N   7           S E C T I O  N   7       S E C T I O  N   7
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+\label{sec:conclusions}
+
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+ridiculus mus. Duis tempus, lectus nec ultricies mollis, mi orci
+feugiat nulla, a bibendum velit orci nec lacus. Duis a odio in nisi
+egestas dictum. Nullam vel quam mauris, eget consectetur orci. Morbi
+ac mi sit amet neque consectetur tempus ac eget est. Curabitur
+malesuada arcu sit amet metus dictum at dapibus arcu accumsan. Fusce
+sollicitudin luctus rutrum.
+
+\begin{itemize}
+    \item{This sample spans a redshift range of $0.28 < z < 4.36$ and has a bimodal distribution, with peaks 
+        at $z\sim0.8$ and $z\sim2.5$.}
+   \item{We recover a wide range of quasar spectra in this selection.  
+        The majority of the objects have spectra of reddened Type 1
+        quasars, Type 2 quasars (both at low and high redshift) and objects
+        with strong absorption features.} 
+    \item{There is a relatively high fraction of Type 2 objects at low redshift,
+        suggesting that a high optical-to-infrared colour can be an efficient
+        selection of narrow-line quasars.}
+    \item{There are three objects that are detected in the $W4$-band but
+        not $W1$ or $W2$ (i.e., ``W1W2-dropouts''), all of which are at
+        $z>2.6$.}
+    \item{We identify an intriguing class of objects at $z\simeq 2-3$ which are
+        characterized by equivalent widths of REW(C\,{\sc iv})
+        $\gtrsim150$\AA.  These objects often also have unusual line
+        properties.  We speculate that the large REWs may be caused by
+        suppressed continuum emission analogous to Type 2 quasars in the
+        Unified Model. However, there is no obvious mechanism in the Unified
+        Model to suppress the continuum without also suppressing the broad
+        emission lines, thus potentially providing an interesting challenge to
+        quasar models.} 
+\end{itemize}
+
+
+Nunc lacus nibh, convallis ac lobortis ut, tempus ac lectus. Maecenas
+eu elit massa. Nulla vel lacus lorem. Proin et lobortis
+tortor. Phasellus ultrices nisl non enim porttitor dictum. Curabitur
+nec nunc ac nibh ornare elementum. Nunc ultrices hendrerit
+ultricies. Aliquam dapibus semper est et gravida. Etiam cursus, massa
+eget tempor elementum, lectus urna feugiat nisi, eget sagittis
+
+
+\appendix
+
+\section{Differences and Usage of various WISE Catalogs}
+The WISE Mission consisted of different stages and subsequently different catalog releases. 
+
+\subsection{Parts of the WISE mission}
+As noted at
+\href{http://irsa.ipac.caltech.edu/Missions/wise.html}{http://irsa.ipac.caltech.edu/Missions/wise.html}
+and in \cite{Meisner16}, there are several surveys that were carried
+out as first part of the WISE, and then part of the NEOWISE mission.
+Table~\ref{tab:WISE_cats} summarises the salient details. 
+
+\begin{table*}
+  \centering
+   \begin{tabular}{l l c c c r r}
+\hline
+\hline
+\multirow{2}{*}{Mission Part}        & \multirow{2}{*}{Duration}                   & \multirow{2}{*}{Cryogenic?}     &  Connected    & Sky          &  No. of deteced & \multirow{2}{*}{Key Reference(s)}\\
+                                                     &                                                           &                                                & Data Release & Coverage & objects              &  \\
+\hline
+\\
+\multirow{2}{*}{First 105 days}   &  14 January 2010  & \multirow{2}{*}{Yes}  & \multirow{2}{*}{\href{http://wise2.ipac.caltech.edu/docs/release/prelim/}{{\tt Preliminary}}} & \multirow{2}{*}{57\%}  & \multirow{2}{*}{$^{a}$257,310,278} &  \multirow{2}{*}{\citet{Wright10}} \\
+                                                  &  - 29 April 2010    &                                  &                                                                                                                                                  &                                       &                                           & \\ 
+\\
+\multirow{2}{*}{Full Cryogenic}   &  07 January 2010     & \multirow{2}{*}{Yes}  & \multirow{2}{*}{\href{http://wise2.ipac.caltech.edu/docs/release/allsky/}{{\tt All-Sky}}}  & \multirow{2}{*}{120\%}  & \multirow{2}{*}{$^{a}$563,921,584}  & \multirow{2}{*}{\citet{Wright10}} \\  
+                                                 &  - 06 August 2010    &                                  &                                                                                                                                                 &              &         & \\ 
+\\
+\multirow{2}{*}{3-band Cryo}  & 06 August 2010   & \multirow{2}{*}{Yes$^{a}$}  & \multirow{2}{*}{\href{http://wise2.ipac.caltech.edu/docs/release/3band/}{{\tt 3-Band Cryo}}} &\multirow{2}{*}{30\%}  &  \multirow{2}{*}{$^{a}$261,418,479} &\multirow{2}{*}{\citet{Wright10}}  \\
+                                              & - 29 September 2010   &                                  &                                                                                                                                                       &   &         & \\ 
+\\ 
+\multirow{2}{*}{NEOWISE}            &  29 September 2010       & \multirow{2}{*}{No}  & \multirow{2}{*}{\href{http://wise2.ipac.caltech.edu/docs/release/postcryo}{{\tt NEOWISE}}}    &\multirow{2}{*}{70\%}  & \multirow{2}{*}{$^c$7,337,642,955} & \multirow{2}{*}{\citet{Mainzer11}} \\
+                                                  &   - 01 February 2011       &                                  &                                                                                                                                                     &                                  &         & \\ 
+\\
+\multirow{2}{*}{AllWISE}           &  14 January 2010   & \multirow{2}{*}{Yes and no}  & \multirow{2}{*}{\href{http://wise2.ipac.caltech.edu/docs/release/allwise/}{{\tt AllWISE}}} & \multirow{2}{*}{$>$100\%} & \multirow{2}{*}{$^a$747,634,026} &  \citet{Wright10}  \\
+                                              & to 29 April 2010      &                                             &                                                                                                                                             &                                            &         &  \cite{Mainzer11}\\ 
+\\ 
+\multirow{2}{*}{NEOWISE-Reactivation 2015}   &  13 December 2013 & \multirow{2}{*}{No} & \multirow{2}{*}{\href{http://wise2.ipac.caltech.edu/docs/release/neowise/neowise_2015_release_intro.html}{{\tt NEOWISE 2015}}} &  \multirow{2}{*}{$>$100\%} & \multirow{2}{*}{$^c$18,468,575,596} &\multirow{2}{*}{\citet{Mainzer14}}  \\
+                                                               &      to 13 December 2014             &                                  &                                                                                                                                                 &              &         & \\ 
+\\
+\multirow{2}{*}{NEOWISE-Reactivation 2016}  & 13 December 2014      & \multirow{2}{*}{No}  &  \multirow{2}{*}{\href{http://wise2.ipac.caltech.edu/docs/release/neowise/}{{\tt NEOWISE 2016}}}  &  \multirow{2}{*}{$>$100\%} & \multirow{2}{*}{$^{c,d}$38,159,806,157} & \multirow{2}{*}{\citet{Mainzer14}}\\
+                                                                       &  to 13 December 2015  &                                  &                                                                                                                                                           &                                             &         & \\ 
+\hline 
+\hline
+\end{tabular}
+       \caption{$^{a}$Objects detected on the Atlas Intensity images. 
+         $^{b}$The detectors continued to be cooled by the
+         hydrogen ice in the inner cryogen tank. The telescope warmed from the
+         12K maintained during the main mission to 45K. This reduced the
+         sensitivity of the W3 12$\mu$m measurements and fully saturated the W4 23$\mu$m 
+         detector %\footnote{wise2.ipac.caltech.edu/docs/release/3band/.}.
+         $^{c}$Source detections extracted from the Single-exposure images.
+         $^{d}$The second year NEOWISE-Reactivation data products are concatenated with those from the first year (originally released on March 26, 2015). 
+       }
+       \label{tab:WISE_cats}
+\end{table*}
+
+
+
+\section{II. AllWISE Source Catalog and Reject Table}
+
+\subsection{II.1.a. Format and Column Descriptions}
+http://wise2.ipac.caltech.edu/docs/release/allwise/expsup/sec2\_1a.html\#det\_bit
+
+\noindent
+Bit-encoded integer indicating bands in which a source has a $w?snr>2$ detection. For example, a source detected in W1 only has {\tt det\_bit}=1 (binary 0001). A source detected in W4 only has {\tt det\_bit}=8 (binary 1000). A source detected in all four bands has {\tt det\_bit}=15 (binary 1111).	
+
+\noindent
+http://wise2.ipac.caltech.edu/docs/release/allwise/expsup/sec2\_1.html
+
+\begin{table}
+  \centering
+   \begin{tabular}{l r r  r}
+\hline
+\hline
+WISE band        & {\tt det\_bit}  & Number     & 	Percentage \\
+combination    &                       & of objects  & 	 of AllWISE \\
+\hline
+W1-W2-W3-W4	        & 15	    & 25 882 083   &    3.5\\
+W1-W2-W4	        & 11	    & 11 309 923	& 1.5\\
+W1-W4		        &  9	    &  2 347 472    & 0.3\\
+W1-W3-W4	        & 13	    &    859 426	& 0.1\\
+W3-W4		        & 12	    &    454 160	& 0.1\\
+W4			        &  8	    &     35 818	& $<$0.1\\
+W2-W3-W4	        & 14	    &     35 528	& $<$0.1\\
+W2-W4		        & 10	    &     15 556	& $<$0.1\\
+\hline
+W4-any              &           & 40 939 966    & 5.5 \\
+%\hline
+%W4-any in SDSS/BOSS QSOs       &           & 40 939 966    & 5.5 \\
+\hline
+\hline
+\end{tabular}
+       \caption{Band-Detection Combinations ($>2\sigma$ per Band) in the AllWISE Catalog. See 
+\href{http://wise2.ipac.caltech.edu/docs/release/allwise/expsup/sec2_1.html}{{\tt http://wise2.ipac.caltech.edu/docs/release/allwise/expsup/sec2\_1.html}}. }
+       \label{tab:my_label}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\bibliographystyle{apj}
+\bibliographystyle{mn2e}
+\bibliography{/cos_pc19a_npr/LaTeX/tester_mnras}
+
+\end{document}
