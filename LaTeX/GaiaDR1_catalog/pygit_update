@@ -1,0 +1,6 @@
+#!/bin/bash
+git status
+
+git add GaiaDR1xWISEW4.*
+git commit -m "Updating GaiaDR1xWISEW4 .tex and .pdf"
+git push
