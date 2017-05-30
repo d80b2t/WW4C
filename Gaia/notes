@@ -1,0 +1,35 @@
+
+
+https://stackoverflow.com/questions/43900224/writing-to-a-file-with-a-for-loop-in-python-adding-a-new-column
+
+
+
+   D a t a
+================================================================================
+/cos_pc19a_npr/data/Gaia
+-rw-r--r--@  1 npr1  staff   744M May 18 17:16 GAIADR1xWISE_W4-2as.csv
+-rw-r--r--@  1 npr1  staff   2.8G May 19 11:02 GAIADR1xWISE_W4-10as.csv
+
+
+GAIADR1xWISE_W4-10as.csv     71 593 992  rows
+
+df 			     = 71593992
+df_noDupes		     = 24671865
+
+
+
+
+   make_3columns_fromWISEW4.ipynb
+================================================================================
+Purpose: Read in a .tbl file generated from: http://irsa.ipac.caltech.edu/cgi-bin/Gator/ and output a::
+  -- 3-column file (UID, RA, Dec) space separated,
+  -- with truly unique IDs in integer format,
+  -- the RAs and Decs in decimal degrees format,
+  -- and lastly, but most importantly the table needs to be sorted in declination order.
+
+
+
+   veryBabyCode_4sortingDecs
+================================================================================
+Ronseal. 
+
