@@ -1,0 +1,86 @@
+
+	AstroPy Digest, Vol 133, Issue 1
+
+Today's Topics:
+
+  1. ANN: astropy-healpix v0.1, a new BSD-licensed HEALPix Python
+     package (Thomas Robitaille)
+
+
+----------------------------------------------------------------------
+
+Message: 1
+Date: Mon, 2 Oct 2017 16:55:11 +0100
+From: Thomas Robitaille <thomas.robitaille@gmail.com>
+To: astropy@python.org
+Subject: [AstroPy] ANN: astropy-healpix v0.1, a new BSD-licensed
+	HEALPix Python package
+Message-ID:
+	<CAGMHX_1kQ2Xt64jk65ZRuA0EVBX7gXhhne_ZvXV5Kf0Sb=9uqw@mail.gmail.com>
+Content-Type: text/plain; charset="UTF-8"
+
+Hi everyone,
+
+We are happy to announce the first release of a new package:
+
+astropy-healpix - A BSD-licensed Astropy-compatible HEALPix implementation
+
+* Docs: http://astropy-healpix.readthedocs.io
+* Code: https://github.com/astropy/astropy-healpix
+* PyPI: https://pypi.python.org/pypi/astropy-healpix
+
+This new package uses C HEALPix code originally developed by Dustin
+Lang as part of astrometry.net (developed based on the HEALPix
+papers), and provides a high-level Pythonic API using Astropy objects
+(including e.g. astropy.coordinates objects). At this time the package
+should still be considered experimental and we may still change the
+API in future depending on feedback on this first release.
+
+The main motivations for developing this package (which is independent
+from the GPL-licensed HEALPix and healpy packages) are to provide a
+BSD-licensed HEALPix implementation that can be used in packages in
+the Astropy ecosystem such as the BSD-licensed reproject, hips, and
+regions packages without worrying about potential licensing issues,
+and to have a lightweight and portable implementation that works on
+all major platforms (Linux, MacOS X, and Windows).
+
+To try it out, you can easily install it with pip:
+
+  pip install astropy-healpix
+
+Or with conda:
+
+  conda install -c conda-forge astropy-healpix
+
+and take a look at the documentation to get started on using it:
+
+http://astropy-healpix.readthedocs.io
+
+Please do report any issues, feature requests, or suggestions for
+improvements in the issue tracker for the repository:
+https://github.com/astropy/astropy-healpix/issues
+
+We would also be really interested in hearing from you if you would
+like to help out with the development/maintenance of the package - the
+Python part of the package is very approachable and there are a number
+of low-hanging issues to solve.
+
+Cheers,
+
+Tom and Christoph
+
+
+------------------------------
+
+Subject: Digest Footer
+
+_______________________________________________
+AstroPy mailing list
+AstroPy@python.org
+https://mail.python.org/mailman/listinfo/astropy
+
+
+------------------------------
+
+End of AstroPy Digest, Vol 133, Issue 1
+***************************************

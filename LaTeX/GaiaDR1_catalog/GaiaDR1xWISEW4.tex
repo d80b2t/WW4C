@@ -1,15 +1,44 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[usenatbib]{mn2e}
 \input{format}
 
 
 \begin{document}
 
-\title{Combing the WISE W4 catalogue and the Gaia Data Release 1:
-Searching for Infrared bright, optically faint objects across the full
-sky.}
- % \author{AUTHOR HERE}
- %\date{\today}
+
+\title[WISE W4s not in Gaia]
+{Combing the WISE W4 catalogue and the
+  Gaia Data Release 1: Searching for Infrared bright, optically faint
+  objects across the full sky}
+\author[Ross \& Hambly]
+{Nicholas P. Ross$^{1}$\thanks{email: npross@roe.ac.uk}, 
+  Nigel C. Hambly$^{1}$\\
+$^1$Institute for Astronomy, Blackford Hill, Edinburgh, EH9 3HJ, United Kingdom \\ 
+ % $^1$Institute for Astronomy, SUPA\footnote{Scottish Universities Physics Alliance}, University of Edinburgh, Royal Observatory, Edinburgh, EH9 3HJ, United Kingdom\\
+}
+
+
 \maketitle
+\begin{abstract}
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+porta sodales est, vel cursus risus porta non. Vivamus vel pretium
+velit. Sed fringilla suscipit felis, nec iaculis lacus convallis
+ac. Fusce pellentesque condimentum dolor, quis vehicula tortor
+hendrerit sed. Class aptent taciti sociosqu ad litora torquent per
+conubia nostra, per inceptos himenaeos. Etiam interdum tristique diam
+eu blandit. Donec in lacinia libero.
+%%
+Sed elit massa, eleifend non sodales a, commodo ut felis. Sed id
+pretium felis. Vestibulum et turpis vitae quam aliquam convallis. Sed
+id ligula eu nulla ultrices tempus. Phasellus mattis erat quis metus
+dignissim malesuada. Nulla tincidunt quam volutpat nibh facilisis
+euismod. Cras vel auctor neque. Nam quis diam risus.
+\end{abstract}
+\begin{keywords}
+galaxies: clustering -- luminous red galaxies: general -- cosmology: 
+observations -- large-scale structure of Universe.
+\end{keywords}
+
+
 
 \section*{Preamble}
 All the code and plotting packages, and smaller catalogues are
@@ -27,18 +56,50 @@ WISE\_W4\_cat\_with\_Gaia.csv  (3.2GB).\\
 
 
 
-\section{Motivation}
-The WISE W4 23$\mu$m band is shallow. Therefore, anything that is detected in
-W4, and is {\it not} a Milky Way star, or nearby e.g. dusty spiral
-galaxy, is going to be intrinsically very luminous. Furthermore,
-objects that are also detected in W4, but are faint/non-detected in
-the optical, or in the shorter WISE W1/W2 bands also have very
-interesting properties, \citep[e.g.,][]{Assef15, Tsai15, Lonsdale15,
-Assef16, Diaz-Santos16, Ricci17, Wu17, Jones17, Farrah17}.  The WISE
-W4 band is also crucial in the discovery and characterization of the
-``Extremely Red Quasar'' population, using a colour selection of
-$r_{\rm AB} − W4_{\rm Vega} >14.0$ \citep{Ross15, Zakamska16,
-Hamann17}.
+\section{Introduction}
+Extremely Red Quasars \citep[ERQs; ][]{Ross15, Hamann17} are a unique obscured
+quasar population with extreme physical conditions related to powerful
+outflows across the line-forming regions \citep{Zakamska16,
+Alexandroff17}.  These sources are the signposts of the most extreme
+form of quasar feedback at the peak epoch of galaxy formation, and may
+represent an active ``blow-out'' phase of quasar evolution.
+%%
+The energetics of luminous AGN, i.e. quasars, is thought to be a major
+ingredient and physical process in galaxy formation and evolution, 
+vital for suppressing, or ``quenching'' star-formation and leading 
+to the population or red galaxies seen in the local Universe. 
+%%
+As such, a great deal of effort has gone into identifying the sites of
+the so-called ``AGN feedback'' , \citep[e.g.,][]{CanoDiaz12, Page12,
+Maiolino12, Cicone14, Harrison14, ZakamskaGreene14, Harrison17} and
+\citep{Fabian12, KormendyHo13, HeckmanBest14, Netzer15, KingPounds15,
+NaabOstriker17} for relevant reviews.
+%%
+Motivated by the ERQs, we are interested in finding further infrared bright, 
+optically faint, high-$z$ quasars. 
+
+The WISE W4 23$\mu$m band is shallow. Therefore, anything that is
+detected in W4, and is {\it not} a Milky Way star, or nearby
+e.g. dusty spiral galaxy, is going to be intrinsically very
+luminous. Furthermore, objects that are also detected in W4, but are
+faint/non-detected in the optical, or in the shorter WISE W1/W2 bands
+also have very interesting properties, \citep[e.g.,][]{Assef15,
+Tsai15, Lonsdale15, Assef16, Diaz-Santos16, Ricci17, Wu17, Jones17,
+Farrah17}.  The WISE W4 band is also crucial in the discovery and
+characterization of the ``Extremely Red Quasar'' population, using a
+colour selection of $r_{\rm AB} − W4_{\rm Vega} >14.0$ \citep{Ross15,
+Zakamska16, Hamann17}.
+%%
+The WISSH Quasars project \citep{Bischetti17, Duras17, Martocchia17}  
+is also focusing on WISE/SDSS selected ``hyper-luminous'' broad-line
+quasars at $z\approx 1.5 - 5$. 
+
+\citet{Singal16}     %% http://adsabs.harvard.edu/abs/2016ApJ...831...60S
+\citet{LaMassa17} %% http://adsabs.harvard.edu/abs/2017ApJ...847..100L
+\citet{Toba15}       %% http://adsabs.harvard.edu/abs/2015PASJ...67...86T
+\citet{Toba16}       %% http://adsabs.harvard.edu/abs/2016ApJ...820...46T
+\citet{Toba17}       %%  http://adsabs.harvard.edu/abs/2017ApJ...835...36T
+
 
 Note, the W4 channel effective wavelength was recalibrated from the
 original 22$\mu$m by \citet{Brown14b}.
@@ -112,6 +173,34 @@ Thus, 16,268,101 objects in the WISE W4 catalogue do not have a
 
 Figure~\ref{fig:fig4} shows the matching radius separation histograms for objects, 
 with and without duplicates. 
+
+\begin{table}
+\begin{centering}
+\begin{tabular}{l r r l l }
+\hline
+\hline
+%  \multicolumn{1}{|c|}{Name} &   \multicolumn{1}{c|}{Mean} &   \multicolumn{1}{c|}{SD} &   \multicolumn{1}{c|}{Minimum} &   \multicolumn{1}{c|}{Maximum} &   \multicolumn{1}{c|}{nGood} \\
+  Name &  Mean & $\sigma$ & Min. & Max. \\
+\hline
+  W4\_no   & 2.0469982E7 & 1.181835E7 & 0 & 40939965 \\
+  RA           & 198.89731 & 98.82655 & 1.9600E-5 & 359.9998663 \\
+  Decl         & -4.5770774 & 41.878914 & -89.9769927 & 89.9673322 \\ 
+  uid           & 2.4711034E7 & 2.592262E7 & -1.0 & 7.1593991E7 \\
+  Gaia\_ID  & 2.42485497E18 & 2.43082065E18 & -1.0 & 6.9175287184039117E18 \\
+  radius      & -0.35169324 & 0.52868944 & -1.0 & 0.16666666 \\
+\hline
+\hline
+\end{tabular}
+      \label{tab:stats}
+\caption{WISE\_W4\_cat\_with\_Gaia. N$_{\rm Good}=40939966$.}
+\end{centering}
+\end{table}
+
+
+
+
+
+
 
 
 \begin{figure*}
